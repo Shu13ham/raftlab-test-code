@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo, faClock, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
-export default function RightSideBar() {
+export default function RightSideBar(props) {
   return (
     <div className='right-sidebar'>
       <p className='subhead m-0'>Premium Access</p>
@@ -33,40 +33,21 @@ export default function RightSideBar() {
       <div className="calendar">
 
       </div>
-      <div className="upcoming-meetings-wrapper">
-        <div className="upcoming-meeting">
-          <div className="meeting-icon">
-            <img src="img/laptop.png" alt="" />
+      {props.meetings.map((meeting)=>{
+        return (
+          <div className="upcoming-meetings-wrapper">
+            <div className="upcoming-meeting">
+              <div className="meeting-icon">
+                <img src={meeting.photo} alt="" />
+              </div>
+              <div className="meetings">
+                <p className='m-0'>{meeting.meetingHeading}</p>
+                <span className='grey-14 first'><FontAwesomeIcon icon={faVideo} color='#999' />{meeting.meetingType}</span>
+                <span className='grey-14'><FontAwesomeIcon icon={faClock} color='#999' />{meeting.time}</span>
+              </div>
+            </div>
           </div>
-          <div className="meetings">
-            <p className='m-0'>Meeting with Client</p>
-            <span className='grey-14 first'><FontAwesomeIcon icon={faVideo} color='#999' />Google Meet</span>
-            <span className='grey-14'><FontAwesomeIcon icon={faClock} color='#999' />12 pm</span>
-          </div>
-        </div>
-        <hr />
-        <div className="upcoming-meeting">
-          <div className="meeting-icon">
-            <img src="img/book.png" alt="" />
-          </div>
-          <div className="meetings">
-            <p className='m-0'>Weekly Report</p>
-            <span className='grey-14 first'><FontAwesomeIcon icon={faVideo} color='#999' />Google Meet</span>
-            <span className='grey-14'><FontAwesomeIcon icon={faClock} color='#999' />03 pm</span>
-          </div>
-        </div>
-        <hr />
-        <div className="upcoming-meeting">
-          <div className="meeting-icon">
-            <img src="img/book.png" alt="" />
-          </div>
-          <div className="meetings">
-            <p className='m-0'>Daily Scrum Meeting</p>
-            <span className='grey-14 first'><FontAwesomeIcon icon={faVideo} color='#999' />Google Meet</span>
-            <span className='grey-14'><FontAwesomeIcon icon={faClock} color='#999' />05 pm</span>
-          </div>
-        </div>
-      </div>
+        )})}
     </div>
   )
 }

@@ -39,6 +39,7 @@ body{
             display: flex;
             align-items: center;
             margin: 12px 0 12px 12px;
+            text-decoration: none;
             h1{
                 font-size: 18px;
                 font-weight: 600;
@@ -155,6 +156,7 @@ body{
                     &:focus-visible{
                         outline: none !important;
                     }
+                    cursor: pointer;
                 }
                 button{
                     border: 1px solid #f0f0f0;
@@ -167,6 +169,7 @@ body{
                     background-color: transparent;
                     display: flex;
                     justify-content: space-between;
+                    cursor: pointer;
                 }
                 hr{
                     margin: 30px 0;
@@ -190,6 +193,8 @@ body{
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
+                        padding: 30px 0;
+                        border-bottom: 1px solid #f0f0f0;
                         .meetings{
                             margin-left: 20px;
                             p{
@@ -218,17 +223,6 @@ body{
             justify-content: space-between;
             align-items: center;
             position: relative;
-            .hamburger{
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                display: none;
-                button{
-                    border: none;
-                    background-color: transparent;
-                }
-            }
             .search-alert{
                 display: flex;
                 justify-content: space-between;
@@ -442,6 +436,7 @@ body{
                     &:focus-visible{
                         outline: none !important;
                     }
+                    cursor: pointer;
                 }
             }
         }
@@ -467,6 +462,7 @@ body{
                 padding: 10px 20px;
                 border: 1px solid #f0f0f0;
                 border-radius: 10px;
+                cursor: pointer;
             }
         }
         .filter-wrapper{
@@ -488,8 +484,122 @@ body{
                 }
             }
         }
+        .display-table{
+            .transaction{
+                display: flex;
+                flex-direction: column;
+                .row{
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 0;
+                    border-bottom: 1px solid #f0f0f0;
+                    .customer{
+                        width: 35%;
+                        display: flex;
+                        align-items: center;
+                        .customer-photo{
+                            width: 50px;
+                            height: 50px;
+                            background-color: grey;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            .black-outer{
+                                width: 20px;
+                                height: 20px;
+                                background-color: #000;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: absolute;
+                                bottom: 2px;
+                                right: 0;
+                            }
+                        }
+                        .customer-name{
+                            margin-bottom: 2px;
+                            font-weight: 500;
+                        }
+                        .customer-email{
+                            font-size: 12px;
+                            color: #999;
+                        }
+                        .customer-info{
+                            margin-left: 15px;
+                        }
+                    }
+                    .status{
+                        width: 15%;
+                        font-size: 12px;
+                        .status-fill{
+                            border: 1px solid #f0f0f0;
+                            padding: 5px 0px 5px 10px;
+                            text-align: center;
+                            border-radius: 25px;
+                            position: relative;
+                            width: 90px;
+                        }
+                        .small-circle{
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: #31c741;
+                            position: absolute;
+                            top: 10px;
+                        }
+                    }
+                    .date{
+                        width: 15%;
+                        font-weight: 500;
+                    }
+                    .invoice{
+                        width: 10%;
+                        font-weight: 500;
+                    }
+                    .people{
+                        width: 25%;
+                        display: flex;
+                        
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                        .photo{
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #999;
+                            border-radius: 50%;
+                            border: 1px solid #fff;
+                        }
+                    }
+                    &.default{
+                        padding: 15px 0;
+                        color: #999;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
     }
-  }
+    .hamburger{
+        position: absolute;
+        top: 35px;
+        left: 15px;
+        transform: translateY(-50%);
+        display: none;
+        z-index: 1;
+        button{
+            border: none;
+            background-color: transparent;
+        }
+    }
+ }
   
   @media only screen and (max-width: 768px) {
     .stats-wrapper{
@@ -516,17 +626,23 @@ body{
         }
     }  
     .sidebar{
-        display: none;
         transition: ease width 0.5s;
         &.show{
             display: block !important;
         }
+        &.hide{
+            display: none !important;
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+        }
         .close-btn{
             display: block !important;
             position: absolute;
-            top: 22px;
-            right: 20px;
-            font-size: 20px;
+            top: 25px;
+            right: 12px;
         }
     }       
     .header{
@@ -540,9 +656,6 @@ body{
             margin-bottom: 15px;
             .search-alert svg{
                 margin: 0 20px 0 0 !important;
-            }
-            .hamburger{
-                display: block !important;
             }
         }
     }
@@ -558,7 +671,7 @@ body{
             position: fixed;
             background: white;
             height: 100vh;
-            z-index: 1;
+            z-index: 2;
         }
         .header-main-wrapper{
             width: 100%;
@@ -595,5 +708,8 @@ body{
                 }
             }
         } 
+        .hamburger{
+            display: block !important;
+        }
     }
   }

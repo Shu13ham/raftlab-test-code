@@ -1,8 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar} from '@fortawesome/free-solid-svg-icons'
+import Transaction from './Transaction';
 
-export default function TransactionHistory() {
+export default function TransactionHistory(props) {
   return (
     <div className='transaction-history'>
       <div className="heading">
@@ -44,7 +45,18 @@ export default function TransactionHistory() {
         </div>
       </div>
       <div className="display-table">
-
+        <div className='transaction'>
+          <div className="row default">
+              <div className="customer">Customer</div>
+              <div className="status">Success</div>
+              <div className="date">Date</div>
+              <div className="invoice">Invoice</div>
+              <div className="people">People</div>
+          </div>
+          {props.transactions.map((transaction)=>{
+            return <Transaction transaction={transaction}/>
+          })}
+        </div>
       </div>
     </div>
   )
