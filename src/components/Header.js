@@ -1,8 +1,9 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faBell, faChevronDown} from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faBell, faChevronDown, faBars} from '@fortawesome/free-solid-svg-icons'
 
-export default function header() {
+export default function Header() {
+  const [click, setClick] = useState(0);
   return (
     <div className='header'>
       <div className="profile-wrapper">
@@ -15,6 +16,11 @@ export default function header() {
         </div>
       </div>
       <div className="header-operations">
+        <div className="hamburger">
+          <button type='button' onClick={() => setClick(1)}>
+            <FontAwesomeIcon icon={faBars} color='#6c62dd' className='search'/>
+          </button>
+        </div>
         <div className="search-alert">
           <FontAwesomeIcon icon={faMagnifyingGlass} color='black' className='search'/>
           <FontAwesomeIcon icon={faBell} color='black' />

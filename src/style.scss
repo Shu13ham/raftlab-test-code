@@ -77,18 +77,20 @@ body{
                 }
             }
         }
+        .close-btn{
+            display: none;
+        }
     }
     .header-main-wrapper{
         width: 80%;
         display: flex;
         flex-direction: column;
         padding: 25px 35px;
-        .header{
-        }
         .main{
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
+            flex-direction: row;
             .main-division{
                 width: 75%;
             }
@@ -104,6 +106,7 @@ body{
                 .info{
                     font-size: 28px;
                     font-weight: 700;
+                    width: 190px;
                 }
                 .profiles{
                     display: flex;
@@ -129,6 +132,9 @@ body{
                         border: none;
                         color: grey;
                         margin: 25px 0;
+                        &:focus-visible{
+                            outline: none !important;
+                        }
                     }
                     button{
                         width: 100%;
@@ -145,6 +151,9 @@ body{
                     border: none;
                     color: #999;
                     margin: 30px 0;
+                    &:focus-visible{
+                        outline: none !important;
+                    }
                 }
                 button{
                     border: 1px solid #f0f0f0;
@@ -155,6 +164,8 @@ body{
                     font-weight: 600;
                     border-radius: 10px;
                     background-color: transparent;
+                    display: flex;
+                    justify-content: space-between;
                 }
                 hr{
                     margin: 30px 0;
@@ -177,7 +188,7 @@ body{
                     .upcoming-meeting{
                         display: flex;
                         justify-content: flex-start;
-                        align-items: flex-start;
+                        align-items: center;
                         .meetings{
                             margin-left: 20px;
                             p{
@@ -199,11 +210,24 @@ body{
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
+        flex-direction: row;
         .header-operations{
-            width: 40%;
+            width: 35%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            .hamburger{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                display: none;
+                button{
+                    border: none;
+                    background-color: transparent;
+                }
+            }
             .search-alert{
                 display: flex;
                 justify-content: space-between;
@@ -247,7 +271,7 @@ body{
         .profile-wrapper{
             display: flex;
             align-items: center;
-            width: 60%;
+            width: 65%;
             .profile-img{
                 margin-right: 25px;
                 width: 60px;
@@ -283,6 +307,7 @@ body{
         padding: 25px;
         background-color: #6c62dd;
         border-radius: 20px;
+        flex-direction: row;
         .stat{
             display: flex;
             align-items: center;
@@ -337,6 +362,7 @@ body{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        flex-direction: row;
         .total-sales-wrapper{
             display: flex;
             justify-content: space-between;
@@ -347,6 +373,7 @@ body{
                     font-size: 20px;
                     font-weight: 600;
                     margin: 0 0 5px 0;
+                    line-height: 1;
                 }
             }
             .sales-amount{
@@ -401,6 +428,9 @@ body{
                 select{
                     border: none;
                     font-size: 10px;
+                    &:focus-visible{
+                        outline: none !important;
+                    }
                 }
             }
         }
@@ -418,6 +448,9 @@ body{
                 border: none;
                 padding-right: 10px;
                 margin-left: 8px;
+                &:focus-visible{
+                    outline: none !important;
+                }
             }
             .month-filter{
                 padding: 10px 20px;
@@ -438,9 +471,118 @@ body{
                     border: none;
                     padding-right: 10px;
                     background: #f3f4f8;
+                    &:focus-visible{
+                        outline: none !important;
+                    }
                 }
             }
         }
     }
   }
   
+  @media only screen and (max-width: 768px) {
+    .stats-wrapper{
+        flex-direction: column !important;
+        padding: 15px 15px 5px 15px !important;
+        align-items: flex-start !important;
+        .stat{
+            margin-bottom: 20px;
+        }
+    }
+    .main{
+        flex-direction: column !important;
+        .main-division{
+            width: 100% !important;
+        }
+        .right-sidebar{
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-top: 25px;
+            .info{
+                width: 100% !important;
+                font-size: 20px !important;
+            }
+        }
+    }  
+    .sidebar{
+        display: none;
+        transition: ease width 0.5s;
+        &.show{
+            display: block !important;
+        }
+        .close-btn{
+            display: block !important;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 20px;
+        }
+    }       
+    .header{
+        flex-direction: column-reverse !important;
+        .profile-wrapper{
+            width: 100% !important;
+        }
+        .header-operations{
+            width: 100% !important;
+            justify-content: flex-end !important;
+            margin-bottom: 15px;
+            .search-alert svg{
+                margin: 0 20px 0 0 !important;
+            }
+            .hamburger{
+                display: block !important;
+            }
+        }
+    }
+    .filter-wrapper {
+        .filter{
+            margin-right: 10px !important;
+            padding: 6px 10px !important;
+        }
+    }
+    .division{
+        .sidebar{
+            width: 50%;
+            position: fixed;
+            background: white;
+            height: 100vh;
+            z-index: 1;
+        }
+        .header-main-wrapper{
+            width: 100%;
+            padding: 15px;
+        }
+        .analytics-wrapper{
+            flex-direction: column !important;
+            padding: 15px;
+            .total-sales-wrapper{
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .analytic{
+                width: 100%;
+            }
+        }
+        .transaction-history .heading p{
+            font-size: 20px;
+        }
+        .profile-wrapper{
+            .welcome-note{
+                font-size: 12px !important;
+            }
+            .good-wishes{
+                font-size: 20px !important;
+            }
+            .profile-img{
+                margin-right: 10px !important;
+                width: 50px !important;
+                height: 45px !important;
+                img{
+                    width: 30px !important;
+                    height: 30px !important;
+                }
+            }
+        } 
+    }
+  }

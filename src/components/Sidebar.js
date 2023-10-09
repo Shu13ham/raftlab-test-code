@@ -1,13 +1,17 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faHouse, faChartSimple, faCompass, faBagShopping, faComment, faGear, faCircleQuestion, faFolderClosed} from '@fortawesome/free-solid-svg-icons'
+import { faClose, faHouse, faChartSimple, faCompass, faBagShopping, faComment, faGear, faCircleQuestion, faFolderClosed} from '@fortawesome/free-solid-svg-icons'
 
-export default function sidebar() {
+export default function Sidebar(click) {
+    const [cancel, setCancel] = useState(0);
   return (
-    <div className='sidebar'>
+    <div className={`sidebar ${!click ? 'show' : ''}`}>
         <div className="company-logo">
             <img src="img/logo.png" alt="" />
             <h1>Omoi</h1>
+        </div>
+        <div className="close-btn">
+            <FontAwesomeIcon icon={faClose} color='#6c62dd' />
         </div>
         <div className="navbar">
             <div className="navbar-options">

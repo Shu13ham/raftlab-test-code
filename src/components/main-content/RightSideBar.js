@@ -1,12 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVideo, faClock} from '@fortawesome/free-solid-svg-icons'
+import { faVideo, faClock, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 export default function RightSideBar() {
   return (
     <div className='right-sidebar'>
       <p className='subhead m-0'>Premium Access</p>
-      <p className='info m-0'>Take Back<br />Your Creative<br />Control</p>
+      <p className='info m-0'>Take Back Your Creative Control</p>
       <div className="profiles">
         <div className="profile">
           <img src="img/profile-pic-2.png" alt="" />
@@ -28,7 +28,7 @@ export default function RightSideBar() {
         <option value="prof-platform grey-12">The Professional Platform</option>
         <option value="unprof-platform">The UnProfessional Platform</option>
       </select>
-      <button>Upgrade Now</button>
+      <button><span>Upgrade Now</span><FontAwesomeIcon icon={faArrowRight} color='#6c62dd' /></button>
       <hr />
       <div className="calendar">
 
