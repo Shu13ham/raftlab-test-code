@@ -24,6 +24,7 @@ export default function Header() {
         <div className="search-alert">
           <FontAwesomeIcon icon={faMagnifyingGlass} color='black' className='search'/>
           <FontAwesomeIcon icon={faBell} color='black' />
+          <div className="small-circle"></div>
         </div>
         <div className="logout">
           <img src="img/profile-pic-2.png" alt="" />
