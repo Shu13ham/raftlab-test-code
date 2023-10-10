@@ -12,7 +12,7 @@ export default function Main() {
       customerEmail: "imshubham.here@gmail.com",
       status: "Success",
       date: "Nov 02, 2023",
-      invoice: "$1000"
+      invoice: "$100,000"
     },
     {
       sno: 2,
@@ -20,14 +20,14 @@ export default function Main() {
       customerEmail: "imshubham.here@gmail.com",
       status: "Success",
       date: "Nov 02, 2023",
-      invoice: "$1000"
+      invoice: "$100,000"
     },{
       sno: 3,
       customerName: "Shailesh Sawant",
       customerEmail: "imshubham.here@gmail.com",
       status: "Success",
       date: "Nov 02, 2023",
-      invoice: "$1000"
+      invoice: "$100,000"
     }
   ];
   let meetings = [
@@ -53,10 +53,33 @@ export default function Main() {
       time: "5pm"
     },
   ];
+  let stats = [
+    {
+      sno: 1,
+      title: "Monthly Revenue",
+      amount: "$4.500",
+      percent: "+2.4%",
+      prevYear: "$1.7k"
+    },
+    {
+      sno: 1,
+      title: "Monthly Sales",
+      amount: "$3.500",
+      percent: "+6.4%",
+      prevYear: "$2.7k"
+    },
+    {
+      sno: 1,
+      title: "Total Profit",
+      amount: "$8.500",
+      percent: "+1.4%",
+      prevYear: "$5.7k"
+    },
+  ];
   return (
     <div className='main'>
         <div className="main-division">
-          <Stats/>
+          <Stats stats={stats}/>
           <Analytics/>
           <TransactionHistory transactions={transactions}/>
         </div>

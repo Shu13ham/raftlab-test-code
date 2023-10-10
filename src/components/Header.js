@@ -7,7 +7,10 @@ export default function Header() {
     <div className='header'>
       <div className="profile-wrapper">
         <div className="profile-img">
-          <img src="img/profile-pic-2.png" alt="" />
+          <div className="profile-img-inner">
+            <img src="img/profile-pic-2.png" alt="" />
+          </div>
+          <div className="small-circle">3</div>
         </div>
         <div className="profile-welcome">
           <p className='good-wishes'>Good Evening Team!</p>

@@ -48,7 +48,7 @@ export default function TransactionHistory(props) {
         <div className='transaction'>
           <div className="row default">
               <div className="customer">Customer</div>
-              <div className="status">Success</div>
+              <div className="status">Status</div>
               <div className="date">Date</div>
               <div className="invoice">Invoice</div>
               <div className="people">People</div>
