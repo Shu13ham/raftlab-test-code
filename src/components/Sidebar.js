@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faBars, faHouse, faChartSimple, faCompass, faBagShopping, faComment, faGear, faCircleQuestion, faFolderClosed} from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Sidebar() {
     const [cancel, setCancel] = useState(false);
@@ -30,10 +30,10 @@ export default function Sidebar() {
   return (
     <>
         <div className={`sidebar ${click && !cancel ? 'show' : 'hide'}`}>
-            <Link to="/" className="company-logo">
+            <NavLink to="/" className="company-logo">
                 <img src="img/logo.png" alt="" />
                 <h1>Omoi</h1>
-            </Link>
+            </NavLink>
             <div className="close-btn">
                 <button type='button' onClick={closeMenu}>
                     <FontAwesomeIcon icon={faClose} color='#6c62dd' />
@@ -41,21 +41,21 @@ export default function Sidebar() {
             </div>
             <div className="navbar">
                 <div className="navbar-options">
-                    <Link to="/" className='navbar-links active'><FontAwesomeIcon icon={faHouse} color='black' />Home</Link>
-                    <Link to="/analytic" className='navbar-links'><FontAwesomeIcon icon={faChartSimple} color='black' />Analytic</Link>
-                    <Link to="/explore" className='navbar-links'><FontAwesomeIcon icon={faCompass} color='black' />Explore</Link>
-                    <Link to="/shop" className='navbar-links'><FontAwesomeIcon icon={faBagShopping} color='black' />Shop</Link>
-                    <Link to="/inbox" className='navbar-links'><FontAwesomeIcon icon={faComment} color='black' />Inbox</Link>
+                    <NavLink to="/" className='navbar-links' activeClassName="navbar__link--active"><FontAwesomeIcon icon={faHouse} color='black' />Home</NavLink>
+                    <NavLink to="/analytic" className='navbar-links'><FontAwesomeIcon icon={faChartSimple} color='black' />Analytic</NavLink>
+                    <NavLink to="/explore" className='navbar-links'><FontAwesomeIcon icon={faCompass} color='black' />Explore</NavLink>
+                    <NavLink to="/shop" className='navbar-links'><FontAwesomeIcon icon={faBagShopping} color='black' />Shop</NavLink>
+                    <NavLink to="/inbox" className='navbar-links'><FontAwesomeIcon icon={faComment} color='black' />Inbox</NavLink>
                 </div>
                 <div className="tools">
                     <p>Tools</p>
-                    <Link to="/setting" className='navbar-links'><FontAwesomeIcon icon={faGear} color='black' />Setting</Link>
-                    <Link to="/help" className='navbar-links'><FontAwesomeIcon icon={faCircleQuestion} color='black' />Help</Link>
+                    <NavLink to="/setting" className='navbar-links'><FontAwesomeIcon icon={faGear} color='black' />Setting</NavLink>
+                    <NavLink to="/help" className='navbar-links'><FontAwesomeIcon icon={faCircleQuestion} color='black' />Help</NavLink>
                 </div>
                 <div className="projects">
                     <p>Projects</p>
-                    <Link to="/amazon" className='navbar-links'><FontAwesomeIcon icon={faFolderClosed} color='black' />Amazon</Link>
-                    <Link to="/invinity" className='navbar-links'><FontAwesomeIcon icon={faFolderClosed} color='black' />Invinity HQ</Link>
+                    <NavLink to="/amazon" className='navbar-links'><FontAwesomeIcon icon={faFolderClosed} color='black' />Amazon</NavLink>
+                    <NavLink to="/invinity" className='navbar-links'><FontAwesomeIcon icon={faFolderClosed} color='black' />Invinity HQ</NavLink>
                 </div>
             </div>
         </div>
