@@ -20,7 +20,7 @@ export default function Header() {
       <div className="header-operations">
         <div className="search-alert">
           <FontAwesomeIcon icon={faMagnifyingGlass} color='black' className='search'/>
-          <FontAwesomeIcon icon={faBell} color='black' />
+          <FontAwesomeIcon icon={faBell} color='black' className='bell'/>
           <div className="small-circle"></div>
         </div>
         <div className="logout">
