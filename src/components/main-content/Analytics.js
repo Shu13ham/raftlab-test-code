@@ -1,8 +1,28 @@
-import React from 'react'
+import { React, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp} from '@fortawesome/free-solid-svg-icons'
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+import { Data } from '../utils/Data';
+import PieChart from './BarChart';
+
+Chart.register(CategoryScale);
 
 export default function Analytics() {
+  const [chartData, setChartData] = useState({
+    labels: Data.map((data) => data.year), 
+    datasets: [
+      {
+        data: Data.map((data) => data.userGain),
+        backgroundColor: [
+          "#6c62dd",
+          "#d2cff8"
+        ],
+        borderRadius: 10,
+      }
+    ]
+  });
+ 
   return (
     <div className='analytics-wrapper'>
       <div className="total-sales-wrapper">
@@ -29,7 +49,7 @@ export default function Analytics() {
           </select>
         </div>
         <div className="graph">
-
+          <PieChart chartData={chartData} />
         </div>
       </div>
     </div>

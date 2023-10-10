@@ -105,12 +105,12 @@ body{
             justify-content: flex-start;
             flex-direction: row;
             .main-division{
-                width: 75%;
+                width: 70%;
             }
             .right-sidebar{
                 margin-left: 35px;
                 position: relative;
-                width: 25%;
+                width: 30%;
                 min-width: 270px;
                 .subhead{
                     font-size: 14px;
@@ -428,7 +428,7 @@ body{
         border-radius: 20px;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: normal;
         flex-direction: row;
         .total-sales-wrapper{
             display: flex;
@@ -744,9 +744,15 @@ body{
             }
         }
     }
- }
+    .chart-container{
+        canvas{
+            height: 180px !important;
+            max-width: 400px !important;
+        }
+    }
+}
   
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .stats-wrapper{
         flex-direction: column !important;
         padding: 15px 15px 5px 15px !important;
@@ -857,9 +863,9 @@ body{
     .calendar .header{
         flex-direction: row !important;
     }
-  }
+}
 
-  @media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     .main{
         flex-direction: column !important;
         .main-division, .right-sidebar{
@@ -911,4 +917,4 @@ body{
             display: block !important; 
         }
     }
-  }
+}
