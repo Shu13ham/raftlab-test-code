@@ -3,9 +3,9 @@ import React from 'react'
 export default function Stats(props) {
   return (
     <div className='stats-wrapper'>
-      {props.stats.map((stat)=>{
+      {props.stats.map((stat, i)=>{
         return(
-          <div className="stat">
+          <div className="stat" key={i}>
             <div className="img">
               <img src="img/cash-stack-1.png" alt="" />
             </div>

@@ -53,8 +53,8 @@ export default function TransactionHistory(props) {
               <div className="invoice">Invoice</div>
               <div className="people">People</div>
           </div>
-          {props.transactions.map((transaction)=>{
-            return <Transaction transaction={transaction}/>
+          {props.transactions.map((transaction, i)=>{
+            return <Transaction transaction={transaction} key={i}/>
           })}
         </div>
       </div>

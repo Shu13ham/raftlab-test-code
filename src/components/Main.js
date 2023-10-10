@@ -8,26 +8,26 @@ export default function Main() {
   let transactions = [
     {
       sno: 1,
-      customerName: "Shubham Sawant",
-      customerEmail: "imshubham.here@gmail.com",
-      status: "Success",
-      date: "Nov 02, 2023",
-      invoice: "$100,000"
+      customerName: "Shubh Kaur",
+      customerEmail: "teste@gmail.com",
+      status: "Done",
+      date: "Nov 01",
+      invoice: "$1000"
     },
     {
       sno: 2,
-      customerName: "Shankar Sawant",
-      customerEmail: "imshubham.here@gmail.com",
-      status: "Success",
-      date: "Nov 02, 2023",
-      invoice: "$100,000"
+      customerName: "Shan Iyer",
+      customerEmail: "test2@gmail.com",
+      status: "Done",
+      date: "Dec 09",
+      invoice: "$5000"
     },{
       sno: 3,
-      customerName: "Shailesh Sawant",
-      customerEmail: "imshubham.here@gmail.com",
-      status: "Success",
-      date: "Nov 02, 2023",
-      invoice: "$100,000"
+      customerName: "Mak Sen",
+      customerEmail: "test3@gmail.com",
+      status: "Done",
+      date: "May 02",
+      invoice: "$9000"
     }
   ];
   let meetings = [
@@ -62,14 +62,14 @@ export default function Main() {
       prevYear: "$1.7k"
     },
     {
-      sno: 1,
+      sno: 2,
       title: "Monthly Sales",
       amount: "$3.500",
       percent: "+6.4%",
       prevYear: "$2.7k"
     },
     {
-      sno: 1,
+      sno: 3,
       title: "Total Profit",
       amount: "$8.500",
       percent: "+1.4%",

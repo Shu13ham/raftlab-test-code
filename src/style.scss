@@ -32,7 +32,7 @@ body{
     .sidebar{
         width: 20%;
         max-width: 180px;
-        min-width: 150px;
+        min-width: 140px;
         padding: 0 20px 0 25px;
         border-right: 1px solid #f0f0f0;
         .company-logo{
@@ -64,14 +64,24 @@ body{
                     &.active, &:hover{
                         background-color: #6c62dd;
                         border-radius: 8px;
-                        color: #000;
+                        color: #fff;
                         transform: scale(1.05);
                         svg{
-                            color: #000;
+                            color: #fff;
                         }
                     }
                     &:hover{
                         background-color: #6c62dd7b;
+                        color: #000;
+                        svg{
+                            color: #000;
+                        }
+                    }
+                    &.active:hover{
+                        color: #fff;
+                        svg{
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -100,7 +110,7 @@ body{
         width: 80%;
         display: flex;
         flex-direction: column;
-        padding: 25px 35px;
+        padding: 25px 18px 25px 35px;
         .main{
             display: flex;
             align-items: flex-start;
@@ -275,7 +285,7 @@ body{
                 align-items: center;
                 position: relative;
                 svg{
-                    margin: 0 20px;
+                    margin: 0 20px 0 0;
                     font-size: 20px;
                     color: #999;
                     cursor: pointer;
@@ -485,7 +495,7 @@ body{
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            width: 40%;
+            width: 50%;
             .sales-cost{
                 .title{
                     font-size: 20px;
@@ -532,7 +542,7 @@ body{
             }
         }
         .analytic{
-            width: 60%;
+            width: 50%;
             .title{
                 font-weight: 600;
                 span{
@@ -625,8 +635,8 @@ body{
                             transform: scale(0.99);
                         }
                     .customer{
-                        width: 35%;
-                        min-width: 230px;
+                        width: 30%;
+                        min-width: 90px;
                         display: flex;
                         align-items: center;
                         flex-direction: row;
@@ -666,7 +676,7 @@ body{
                     }
                     .status{
                         width: 15%;
-                        min-width: 100px;
+                        min-width: 70px;
                         font-size: 12px;
                         .status-fill{
                             border: 1px solid #f0f0f0;
@@ -674,7 +684,7 @@ body{
                             text-align: center;
                             border-radius: 25px;
                             position: relative;
-                            width: 70px;
+                            width: 50px;
                             font-weight: 500;
                         }
                         .small-circle{
@@ -684,24 +694,27 @@ body{
                             background-color: #31c741;
                             position: absolute;
                             top: 10px;
+                            left: 8px;
                         }
                     }
                     .date{
                         width: 20%;
-                        min-width: 100px;
+                        min-width: 60px;
                         font-weight: 500;
                         font-size: 14px;
                     }
                     .invoice{
                         width: 15%;
-                        min-width: 80px;
+                        min-width: 55px;
                         font-weight: 500;
                         font-size: 14px;
                     }
                     .people{
                         width: 15%;
-                        min-width: 100px;
+                        min-width: 50px;
                         display: flex;
+                        flex-direction: row;
+                        font-size: 14px;
                         .photo-wrapper{
                             max-width: 20px;
                         }
@@ -827,7 +840,7 @@ body{
     .chart-container{
         canvas{
             height: 180px !important;
-            max-width: 400px !important;
+            max-width: 315px !important;
         }
     }
 }
@@ -932,7 +945,30 @@ body{
     }
     .transaction-history{
         .display-table{
-            overflow-x: auto;
+        }
+        .transaction{
+            .customer{
+                .customer-photo{
+                    display: none !important;
+                }
+                .customer-info{
+                    margin-left: 0 !important;
+                }
+            }
+            .status{
+
+            }
+            .date{
+
+            }
+            .invoice{
+
+            }
+            .people{
+                .photo-wrapper{
+                    max-width: 10px !important;
+                }
+            }
         }
     }
     .right-sidebar{
@@ -953,6 +989,7 @@ body{
         }
         .right-sidebar{
             margin-left: 0 !important;
+            margin-top: 50px;
         }
         .right-sidebar .info{
             width: 100% !important;

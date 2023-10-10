@@ -50,9 +50,9 @@ export default function RightSideBar(props) {
       <div className="calendar">
         <Calendar showDetailsHandle={showDetailsHandle} />
       </div>
-      {props.meetings.map((meeting)=>{
+      {props.meetings.map((meeting, i)=>{
         return (
-          <div className="upcoming-meetings-wrapper">
+          <div className="upcoming-meetings-wrapper" key={i}>
             <div className="upcoming-meeting">
               <div className="meeting-icon">
                 <img src={meeting.photo} alt="" />

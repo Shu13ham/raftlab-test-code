@@ -2,6 +2,9 @@ import React from 'react'
 
 export const Amazon = () => {
   return (
-    <div>Amazon</div>
+    <div>
+      <h1>Amazon</h1>
+      <img src="img/coming-soon.png" alt="" width={300}/>
+    </div>
   )
 }
