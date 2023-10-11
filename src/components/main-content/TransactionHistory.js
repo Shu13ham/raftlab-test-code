@@ -7,7 +7,7 @@ export default function TransactionHistory(props) {
   return (
     <div className='transaction-history'>
       <div className="heading flex justify-between items-center">
-        <p className='text-3xl'>Transaction History</p>
+        <p className='text-3xl  font-semibold'>Transaction History</p>
         <div className='month-filter'>
           <FontAwesomeIcon icon={faCalendar} color='grey' className='text-lg'/>
           <select name="month" id="month">
@@ -46,12 +46,12 @@ export default function TransactionHistory(props) {
       </div>
       <div className="display-table">
         <div className='transaction flex flex-col'>
-          <div className="row default text-xs flex items-center">
-              <div className="customer flex items-center flex-row">Customer</div>
-              <div className="status">Status</div>
-              <div className="date">Date</div>
-              <div className="invoice">Invoice</div>
-              <div className="people">People</div>
+          <div className="row default font-medium text-xs flex items-center">
+              <div className=" font-medium customer w-1/3 flex items-center flex-row min-w-[90px]">Customer</div>
+              <div className=" font-medium status min-w-[70px] w-1/6 text-xs">Status</div>
+              <div className=" font-medium date min-w-[60px] w-1/6 text-xs">Date</div>
+              <div className=" font-medium invoice min-w-[55px] w-1/6 text-xs">Invoice</div>
+              <div className=" font-medium people min-w-[50px] w-1/6 flex flex-row text-xs">People</div>
           </div>
           {props.transactions.map((transaction, i)=>{
             return <Transaction transaction={transaction} key={i}/>

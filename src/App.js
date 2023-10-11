@@ -17,11 +17,11 @@ function App() {
   return (
     <>
       <Router>
-        <div className="body">
+        <div className="body m-0 p-0">
           <div className="container">
             <div className="division flex">
               <Sidebar/>
-              <div className='header-main-wrapper  flex flex-col'>
+              <div className='header-main-wrapper w-4/5 flex flex-col w-full'>
                 <Header/>
                 <Routes>
                   <Route exact path="/" element={<Main />} />

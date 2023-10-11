@@ -1,43 +1,17 @@
 /*  */
-body{
-    margin: 0;
-    padding: 0;
-  }
+
   .container{
     max-width: unset;
   }
-  .m-0{
-    margin: 0;
-  }
-  .grey-14{
-    font-size: 14px;
-    color: #999;
-  }
-  .grey-12{
-    font-size: 12px;
-    color: #999;
-  }
-  .grey-10{
-    font-size: 10px;
-    color: #999;
-  }
   .division{
     .sidebar{
-        width: 20%;
-        max-width: 230px;
-        min-width: 140px;
         padding: 0 20px 0 25px;
         border-right: 1px solid #f0f0f0;
         .company-logo{
-            align-items: center;
-            margin: 12px 0 12px 12px;
+            margin: 30px 0 12px 12px;
             text-decoration: none;
             h1{
-                font-weight: 700;
                 padding-left: 10px;
-            }
-            img{
-                width: 30px;
             }
         }
         .navbar{
@@ -46,7 +20,6 @@ body{
                 .navbar-links{
                     padding: 10px 20px;
                     margin: 5px 0;
-                    color: #404449;
                     transition: all 0.5s linear;
                     &.active, &:hover{
                         background-color: #6c62dd;
@@ -72,16 +45,10 @@ body{
                     }
                 }
             }
-            .tools p, .projects p{
-                color: #999;
-                font-weight: 500;
-            }
             a{
                 text-decoration: none;
-                font-weight: 500;
                 svg{
                     margin-right: 10px;
-                    color: #404449;
                 }
             }
         }
@@ -91,70 +58,39 @@ body{
         }
     }
     .header-main-wrapper{
-        width: 80%;
         padding: 25px 18px 25px 35px;
         .main{
-            .main-division{
-                width: 70%;
-            }
             .right-sidebar{
                 margin-left: 35px;
                 position: relative;
-                width: 30%;
-                min-width: 270px;
                 .subhead{
-                    color: #6c62dd;
-                    font-weight: 500;
                     margin-bottom: 15px;
-                }
-                .info{
-                    font-weight: 700;
-                    width: 190px;
                 }
                 .profiles{
                     position: absolute;
                     top: 110px;
                     right: 40px;
                     .profile{
-                        width: 40px;
-                        height: 40px;
-                        background: pink;
                         border-radius: 50%;
                         border: 2px solid #fff;
-                        img{
-                            width: 30px;
-                            height: 30px;
-                        }
-                        &.default{
-                            background-color: black;
-                            color: #fff;
-                        }
                     }
                     select{
                         border: none;
-                        color: grey;
                         margin: 25px 0;
                         &:focus-visible{
                             outline: none !important;
                         }
                     }
                     button{
-                        width: 100%;
                         padding: 15px;
                         text-align: left;
                         background: transparent;
                         border: 1px solid #f0f0f0;
                         border-radius: 10px;
-                        color: #6c62dd;
-                        font-weight: 600;
-                    }
-                    .photo-wrapper{
-                        max-width: 25px;
                     }
                 }
                 select{
                     border: none;
-                    color: #999;
                     margin: 30px 0;
                     &:focus-visible{
                         outline: none !important;
@@ -164,10 +100,7 @@ body{
                 button{
                     border: 1px solid #f0f0f0;
                     padding: 12px 15px;
-                    width: 100%;
                     text-align: left;
-                    color: #6c62dd;
-                    font-weight: 500;
                     border-radius: 10px;
                     background-color: transparent;
                     cursor: pointer;
@@ -182,19 +115,11 @@ body{
                 }
                 hr{
                     margin: 30px 0;
-                    background-color: #f0f0f0;
                 }
                 .upcoming-meetings-wrapper{
                     .meeting-icon{
-                        width: 58px;
-                        height: 58px;
-                        background: #eee;
                         border-radius: 50%;
                         transition: all 0.5s linear;
-                        img{
-                            width: 30px;
-                            height: 30px;
-                        }
                     }
                     .upcoming-meeting{
                         padding: 30px 0;
@@ -203,12 +128,6 @@ body{
                         transition: transform 0.5s linear;
                         &:hover{
                             transform: scale(1.03);
-                            .meetings span{
-                                color: #6c62dd;
-                                svg{
-                                    color: #6c62dd;
-                                }
-                            }
                             .meeting-icon{
                                 background: #a3a3a3;
                             }
@@ -216,7 +135,6 @@ body{
                         .meetings{
                             margin-left: 20px;
                             p{
-                                font-weight: 600;
                                 margin-bottom: 10px;
                             }
                             svg{
@@ -234,18 +152,14 @@ body{
     .header{
         margin-bottom: 20px;
         .header-operations{
-            width: 35%;
             position: relative;
             .search-alert{
-                align-items: center;
                 position: relative;
                 svg{
                     margin: 0 40px 0 0;
-                    color: #999;
                     cursor: pointer;
                 }
                 .search{
-                    background-color: #f0f0f0;
                     border-radius: 50%;
                     padding: 10px;
                     transition: all 0.5s linear;
@@ -255,28 +169,21 @@ body{
                     }
                 }
                 .bell{
-                    color: #999;
                     transition: all 0.5s linear;
                     &:hover{
                         color: #6c62dd;
-                        &+.small-circle{
-                        }
                     }
                 }
                 .small-circle{
-                    width: 10px;
-                    height: 10px;
-                    background-color: #6c62dd;
                     border-radius: 50%;
                     position: absolute;
                     top: 5px;
                     right: 40px;
-                    border: 1px solid white;
+                    border: 1px solid #fff;
                     transition: all 0.5s linear;
                 }
             }
             .logout{
-                height: 31px;
                 padding: 5px 8px;
                 border-radius: 25px;
                 box-shadow: 0px 2px 10px 0px #d1cdcd;
@@ -284,7 +191,7 @@ body{
                 transition: all 0.5s linear;
                 &:hover{
                     background-color: #6c62dd;
-                    color: white;
+                    color: #fff;
                     svg{
                         color: #fff;
                     }
@@ -293,81 +200,46 @@ body{
                     padding: 2px;
                     border-radius: 50%;
                     background: #f5bcba;
-                    width: 20px;
-                    height: 20px;
-                    border: 2px solid white;
+                    border: 2px solid #fff;
                 }
                 p{
                     margin: 0 10px;
-                    font-weight: 500;
-                }
-                svg{
-                    color: #999;
                 }
             }
         }
         .profile-wrapper{
-            width: 65%;
             .profile-img{
                 margin-right: 25px;
-                width: 63px;
-                height: 63px;
                 border-radius: 50%;
-                background-color: #ffffff;
                 border: 3px solid #eee;
                 border-right: 3px solid #6c62dd;
                 transform: rotate(310deg);
                 position: relative;
                 .profile-img-inner{
-                    width: 57px;
-                    height: 57px;
                     border-radius: 50%;
                     background-color: #fbaf96;
                 }
                 img{
-                    width: 40px;
-                    height: 40px;
                     transform: rotate(55deg);
                 }
                 .small-circle{
-                    width: 16px;
-                    height: 16px;
-                    background-color: #6c62dd;
                     border-radius: 50%;
                     position: absolute;
                     top: 21px;
                     right: -12px;
-                    border: 2px solid white;
-                    color: #fff;
+                    border: 2px solid #fff;
                     transform: rotate(50deg);
                 }
             } 
-            .profile-welcome{
-                .good-wishes{
-                    font-weight: 600;
-                    margin: 0;
-                }
-                .welcome-note{
-                    color: #999;
-                    margin: 0px 0 0;
-                }
-            }
         }
     }
     .stats-wrapper{
         padding: 25px;
-        background-color: #6c62dd;
         border-radius: 20px;
         .stat{
             .img{
-                width: 50px;
-                height: 50px;
                 background: #c4ecfd;
                 border-radius: 50%;
-                img{
-                    width: 30px;
-                    height: 30px;
-                }
             }
             .info{
                 margin-left: 15px;
@@ -377,24 +249,14 @@ body{
                 }
                 .previous-record{
                     margin-top: 5px;
-                    color: #fff;
-                    font-weight: 700;
                     span{
                         color: #bbb7ee;
-                        font-weight: 500;
                     }
                 }
-                .amount{
-                    color: #fff;
-                    font-weight: 600;
-                }
                 .percent{
-                    background-color: #fff;
                     padding: 2px 6px;
-                    color: #6c62dd;
                     border-radius: 25px;
                     margin-left: 10px;
-                    font-weight: 500;
                 }
             }
         }
@@ -404,12 +266,9 @@ body{
         padding: 25px 35px;
         border: 1px solid #f0f0f0;
         border-radius: 20px;
-        flex-direction: row;
         .total-sales-wrapper{
-            width: 50%;
             .sales-cost{
                 .title{
-                    font-weight: 600;
                     margin: 0 0 5px 0;
                     line-height: 1;
                 }
@@ -417,8 +276,6 @@ body{
             .sales-amount{
                 margin-top: 40px;
                 .amount{
-                    font-weight: 700;
-                    color: #6c62dd;
                     line-height: 1;
                 }
                 .percent{
@@ -427,7 +284,6 @@ body{
                     border-radius: 25px;
                     margin-left: 15px;
                     color: #74ca7d;
-                    font-weight: 700;
                     position: relative;
                     padding-left: 20px;
                     .caret-up{
@@ -439,18 +295,20 @@ body{
                 }
                 .previous-year{
                     color: #31c741;
-                    font-weight: 500;
                     margin: 5px 0 0 0;
                 }
             }
         }
         .analytic{
-            width: 50%;
             .title{
-                font-weight: 600;
                 span{
                     color:#31c741;
-                    font-weight: 700;
+                }
+            }
+            select{
+                font-size: 12px;
+                &:focus-visible{
+                    outline: none;
                 }
             }
             .analytic-months{
@@ -468,7 +326,6 @@ body{
     .transaction-history{
         .heading{
             p{
-                font-weight: 600;
                 margin-bottom: 20px;
             }
             select{
@@ -519,18 +376,11 @@ body{
                             transform: scale(0.99);
                         }
                     .customer{
-                        width: 30%;
-                        min-width: 90px;
                         .customer-photo{
-                            width: 45px;
-                            height: 45px;
                             background-color: #eee;
                             border-radius: 50%;
                             position: relative;
                             .black-outer{
-                                width: 20px;
-                                height: 20px;
-                                background-color: #000;
                                 border-radius: 50%;
                                 position: absolute;
                                 bottom: 0px;
@@ -539,30 +389,20 @@ body{
                         }
                         .customer-name{
                             margin-bottom: 2px;
-                            font-weight: 500;
-                        }
-                        .customer-email{
-                            color: #999;
                         }
                         .customer-info{
                             margin-left: 15px;
                         }
                     }
                     .status{
-                        width: 15%;
-                        min-width: 70px;
                         .status-fill{
                             border: 1px solid #f0f0f0;
                             padding: 5px 0px 5px 10px;
                             text-align: center;
                             border-radius: 25px;
                             position: relative;
-                            width: 60px;
-                            font-weight: 500;
                         }
                         .small-circle{
-                            width: 8px;
-                            height: 8px;
                             border-radius: 50%;
                             background-color: #31c741;
                             position: absolute;
@@ -570,30 +410,8 @@ body{
                             left: 8px;
                         }
                     }
-                    .date{
-                        width: 20%;
-                        min-width: 60px;
-                        font-weight: 500;
-                    }
-                    .invoice{
-                        width: 15%;
-                        min-width: 55px;
-                        font-weight: 500;
-                    }
                     .people{
-                        width: 15%;
-                        min-width: 50px;
-                        .photo-wrapper{
-                            max-width: 20px;
-                        }
-                        img{
-                            width: 20px;
-                            height: 20px;
-                        }
                         .photo{
-                            width: 30px;
-                            height: 30px;
-                            background-color: #999;
                             border-radius: 50%;
                             border: 1px solid #fff;
                         }
@@ -601,9 +419,6 @@ body{
                     &.default{
                         padding: 15px 0;
                         color: #999;
-                        div{
-                            font-weight: 400 !important;
-                        }
                     }
                 }
             }
@@ -625,14 +440,8 @@ body{
     .calendar{
         margin-bottom: 15px;
         .header{
-            align-items: center;
-            .col-left{
-                font-weight: 600;
-            }
             .icon{
                 border: 1px solid #f0f0f0;
-                width: 30px;
-                height: 30px;
                 border-radius: 50%;
                 cursor: pointer;
                 transition: all 0.5s linear;
@@ -650,7 +459,6 @@ body{
         .days.row, .body .row{
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            align-items: center;
             .day, .date{
                 color: #999;
                 text-align: center;
@@ -664,8 +472,6 @@ body{
                 color: #404449;
                 text-align: center;
                 .number{
-                    width: 30px;
-                    height: 30px;
                     border-radius: 50%;
                     background-color: #fff;
                     margin: auto;
@@ -677,7 +483,6 @@ body{
                 }
                 .number.today{
                     background-color: #6c62dd !important;
-                    color: #fff;
                     transition: all 0.5s linear;
                     &:hover{
                         opacity: 0.5;
@@ -745,7 +550,7 @@ body{
         .sidebar{
             width: 50%;
             position: fixed;
-            background: white;
+            background: #fff;
             height: 100%;
             z-index: 2;
         }
@@ -792,7 +597,7 @@ body{
                     height: 44px !important;
                 }
                 .small-circle{
-                    top: 16px !important;
+                    top: 13px !important;
                 }
             }
         } 
@@ -859,13 +664,10 @@ body{
         }
     }
     .division{
-        .header-main-wrapper{
-            width: 100% !important;
-        }
         .sidebar{
             width: 50%;
             position: fixed;
-            background: white;
+            background: #fff;
             height: 100%;
             z-index: 2;
             transition: ease width 0.5s;
@@ -883,7 +685,7 @@ body{
             .close-btn{
                 display: block !important;
                 position: absolute;
-                top: 15px;
+                top: 32px;
                 right: 12px;
             }
         }

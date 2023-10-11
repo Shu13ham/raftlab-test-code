@@ -29,9 +29,9 @@ export default function Sidebar() {
     }
   return (
     <>
-        <div className={`sidebar ${click && !cancel ? 'show' : 'hide'}`}>
-            <NavLink to="/" className="company-logo flex">
-                <img src="img/logo.png" alt="" />
+        <div className={`sidebar w-1/5 max-w-[230px] min-w-[140px] border-grey-lines ${click && !cancel ? 'show' : 'hide'}`}>
+            <NavLink to="/" className="company-logo font-bold flex items-center">
+                <img src="img/logo.png" alt="" className='w-1/5'/>
                 <h1 className='text-2xl'>Omoi</h1>
             </NavLink>
             <div className="close-btn">
@@ -41,21 +41,21 @@ export default function Sidebar() {
             </div>
             <div className="navbar flex flex-col">
                 <div className="navbar-options flex flex-col">
-                    <NavLink to="/" className='navbar-links text-sm' activeClassName="navbar__link--active"><FontAwesomeIcon className='text-lg' icon={faHouse} color='black' />Home</NavLink>
-                    <NavLink to="/analytic" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faChartSimple} color='black' />Analytic</NavLink>
-                    <NavLink to="/explore" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faCompass} color='black' />Explore</NavLink>
-                    <NavLink to="/shop" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faBagShopping} color='black' />Shop</NavLink>
-                    <NavLink to="/inbox" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faComment} color='black' />Inbox</NavLink>
+                    <NavLink to="/" className='navbar-links text-[#404449] font-medium text-sm' activeClassName="navbar__link--active"><FontAwesomeIcon className='text-lg text-[#404449]' icon={faHouse} color='black' />Home</NavLink>
+                    <NavLink to="/analytic" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faChartSimple} color='black' />Analytic</NavLink>
+                    <NavLink to="/explore" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faCompass} color='black' />Explore</NavLink>
+                    <NavLink to="/shop" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faBagShopping} color='black' />Shop</NavLink>
+                    <NavLink to="/inbox" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faComment} color='black' />Inbox</NavLink>
                 </div>
                 <div className="tools flex flex-col">
-                    <p className='text-xs'>Tools</p>
-                    <NavLink to="/setting" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faGear} color='black' />Setting</NavLink>
-                    <NavLink to="/help" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faCircleQuestion} color='black' />Help</NavLink>
+                    <p className='text-xs  font-medium text-grey-text'>Tools</p>
+                    <NavLink to="/setting" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faGear} color='black' />Setting</NavLink>
+                    <NavLink to="/help" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faCircleQuestion} color='black' />Help</NavLink>
                 </div>
                 <div className="projects flex flex-col">
-                    <p className='text-xs'>Projects</p>
-                    <NavLink to="/amazon" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faFolderClosed} color='black' />Amazon</NavLink>
-                    <NavLink to="/invinity" className='navbar-links text-sm'><FontAwesomeIcon className='text-lg' icon={faFolderClosed} color='black' />Invinity HQ</NavLink>
+                    <p className='text-xs  font-medium text-grey-text'>Projects</p>
+                    <NavLink to="/amazon" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faFolderClosed} color='black' />Amazon</NavLink>
+                    <NavLink to="/invinity" className='navbar-links text-[#404449] font-medium text-sm'><FontAwesomeIcon className='text-lg text-[#404449]' icon={faFolderClosed} color='black' />Invinity HQ</NavLink>
                 </div>
             </div>
         </div>

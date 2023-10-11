@@ -78,7 +78,7 @@ export default function Main() {
   ];
   return (
     <div className='main flex flex-row justify-start items-start'>
-        <div className="main-division">
+        <div className="main-division w-3/4">
           <Stats stats={stats}/>
           <Analytics/>
           <TransactionHistory transactions={transactions}/>
