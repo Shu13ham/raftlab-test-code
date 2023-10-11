@@ -3,6 +3,9 @@ body{
     margin: 0;
     padding: 0;
   }
+  .container{
+    max-width: unset;
+  }
   .m-0{
     margin: 0;
   }
@@ -31,7 +34,7 @@ body{
     display: flex;
     .sidebar{
         width: 20%;
-        max-width: 180px;
+        max-width: 230px;
         min-width: 140px;
         padding: 0 20px 0 25px;
         border-right: 1px solid #f0f0f0;
@@ -684,7 +687,7 @@ body{
                             text-align: center;
                             border-radius: 25px;
                             position: relative;
-                            width: 50px;
+                            width: 60px;
                             font-weight: 500;
                         }
                         .small-circle{
@@ -881,6 +884,9 @@ body{
             .search-alert svg{
                 margin: 0 20px 0 0 !important;
             }
+            .small-circle{
+                right: 20px !important;
+            }
         }
     }
     .filter-wrapper {
@@ -904,6 +910,7 @@ body{
         .analytics-wrapper{
             flex-direction: column !important;
             padding: 15px;
+            margin-bottom: 50px;
             .total-sales-wrapper{
                 width: 100%;
                 margin-bottom: 15px;
@@ -912,9 +919,13 @@ body{
                 width: 100%;
             }
         }
-        .transaction-history .heading p{
-            font-size: 20px;
-        }
+        .transaction-history .heading{
+            margin-bottom: 15px;
+            p{
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+        } 
         .profile-wrapper{
             .welcome-note{
                 font-size: 12px !important;
@@ -1026,7 +1037,7 @@ body{
             .close-btn{
                 display: block !important;
                 position: absolute;
-                top: 25px;
+                top: 15px;
                 right: 12px;
             }
         }
