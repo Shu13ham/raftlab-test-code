@@ -21,9 +21,9 @@ export default function Transaction({transaction}) {
                     <div className="small-circle h-2 w-2"></div>
                 </div>
             </div>
-            <div className="date min-w-[60px] w-1/6 font-medium text-xs">{transaction.date}</div>
-            <div className="invoice min-w-[55px] w-1/6 font-medium text-xs">{transaction.invoice}</div>
-            <div className="people min-w-[50px] w-1/6 flex flex-row text-xs">
+            <div className="date min-w-[60px] w-1/6 font-medium text-sm">{transaction.date}</div>
+            <div className="invoice min-w-[55px] w-1/6 font-medium text-sm">{transaction.invoice}</div>
+            <div className="people min-w-[50px] w-1/6 flex flex-row text-sm">
                 <div className="photo-wrapper max-w-[20px]">
                     <div className="photo bg-grey-text w-8 h-8 flex justify-center items-center">
                         <img className='h-5 w-5' src="img/profile-pic-2.png" alt="" />

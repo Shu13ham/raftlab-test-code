@@ -11,7 +11,7 @@ export default function TransactionHistory(props) {
         <div className='month-filter'>
           <FontAwesomeIcon icon={faCalendar} color='grey' className='text-lg'/>
           <select name="month" id="month">
-            <option value="Jan">Jan</option>
+            <option data-icon="" value="Jan">Jan</option>
             <option value="Feb">Feb</option>
             <option value="Mar">Mar</option>
             <option value="Apr">Apr</option>
@@ -20,7 +20,7 @@ export default function TransactionHistory(props) {
       </div>
       <div className="filter-wrapper flex justify-start items-center">
         <div className="filter">
-          <select name="Recepient" id="recepient" className='text-sm'>
+          <select name="Recepient" id="recepient" className='text-md'>
             <option value="Shubham">Shubham</option>
             <option value="Rahul">Rahul</option>
             <option value="Sammer">Sammer</option>
@@ -28,7 +28,7 @@ export default function TransactionHistory(props) {
           </select>
         </div>
         <div className="filter">
-          <select name="Amount" id="amount">
+          <select name="Amount" id="amount"  className='text-md'>
             <option value="100">$100</option>
             <option value="200">$200</option>
             <option value="300">$300</option>
@@ -36,10 +36,9 @@ export default function TransactionHistory(props) {
           </select>
         </div>
         <div className="filter">
-          <select name="Status" id="status">
+          <select name="Status" id="status"  className='text-md'>
             <option value="Success">Success</option>
-            <option value="Pending">Feb</option>
-            <option value="Forwarded">Forwarded</option>
+            <option value="Pending">Succeed</option>
             <option value="Done">Done</option>
           </select>
         </div>

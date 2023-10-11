@@ -329,8 +329,11 @@
                 margin-bottom: 20px;
             }
             select{
-                border: none;
-                padding-right: 10px;
+                border: 1px solid #f0f0f0;
+                padding: 10px 15px 10px 45px;
+                width: 120px;
+                height: 45px;
+                border-radius: 10px;
                 margin-left: 8px;
                 cursor: pointer;
                 &:focus-visible{
@@ -338,10 +341,12 @@
                 }
             }
             .month-filter{
-                padding: 10px 15px;
-                border: 1px solid #f0f0f0;
-                border-radius: 10px;
-                cursor: pointer;
+                position: relative;
+                svg{
+                    position: absolute;
+                    top: 14px;
+                    left: 25px;
+                }
             }
         }
         .filter-wrapper{
@@ -349,15 +354,20 @@
             .filter{
                 margin-right: 10px;
                 background: #f3f4f8;
-                padding: 8px 15px;
+                // padding: 8px 15px;
                 border-radius: 8px;
                 cursor: pointer;
                 select{
                     border: none;
-                    padding-right: 10px;
+                    padding-left: 10px;
                     background: #f3f4f8;
                     color: #404449;
+                    border-radius: 8px;
                     cursor: pointer;
+                    width: auto;
+                    height: 40px;
+                    margin-right: 10px;
+                    padding-right: 5px;
                     &:focus-visible{
                         outline: none !important;
                     }
