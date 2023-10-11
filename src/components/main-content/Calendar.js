@@ -1,7 +1,15 @@
 import { useState } from "react";
-import { format, startOfWeek, addDays, isSameDay, lastDayOfWeek, addWeeks, subWeeks} from "date-fns";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons'
+import {
+  format,
+  startOfWeek,
+  addDays,
+  isSameDay,
+  lastDayOfWeek,
+  addWeeks,
+  subWeeks,
+} from "date-fns";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const Calendar = ({ showDetailsHandle }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -29,12 +37,26 @@ const Calendar = ({ showDetailsHandle }) => {
           <span>{format(currentMonth, dateFormat)}</span>
         </div>
         <div className="col-right flex">
-            <div className="icon w-8 h-8 flex justify-center items-center" onClick={() => changeWeekHandle("prev")}>
-                <FontAwesomeIcon icon={faAngleLeft} color='#6c62dd' className="text-xs"/>
-            </div>
-            <div className="icon w-8 h-8 flex justify-center items-center col-end" onClick={() => changeWeekHandle("next")}>
-                <FontAwesomeIcon icon={faAngleRight} color='#6c62dd' className="text-xs"/>
-            </div>
+          <div
+            className="icon w-8 h-8 flex justify-center items-center"
+            onClick={() => changeWeekHandle("prev")}
+          >
+            <FontAwesomeIcon
+              icon={faAngleLeft}
+              color="#6c62dd"
+              className="text-xs"
+            />
+          </div>
+          <div
+            className="icon w-8 h-8 flex justify-center items-center col-end"
+            onClick={() => changeWeekHandle("next")}
+          >
+            <FontAwesomeIcon
+              icon={faAngleRight}
+              color="#6c62dd"
+              className="text-xs"
+            />
+          </div>
         </div>
       </div>
     );
@@ -66,20 +88,24 @@ const Calendar = ({ showDetailsHandle }) => {
         const cloneDay = day;
         days.push(
           <div
-            className='date text-xs'
+            className="date text-xs"
             key={day}
             onClick={() => {
               const dayStr = format(cloneDay, "ccc dd MMM yy");
               onDateClickHandle(cloneDay, dayStr);
             }}
           >
-            <span className={`number w-8 h-8 flex justify-center items-center ${
-              isSameDay(day, new Date())
-                ? "today text-white"
-                : isSameDay(day, selectedDate)
-                ? "selected"
-                : ""
-            }`}>{formattedDate}</span>
+            <span
+              className={`number w-8 h-8 flex justify-center items-center ${
+                isSameDay(day, new Date())
+                  ? "today text-white"
+                  : isSameDay(day, selectedDate)
+                  ? "selected"
+                  : ""
+              }`}
+            >
+              {formattedDate}
+            </span>
           </div>
         );
         day = addDays(day, 1);
