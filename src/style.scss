@@ -21,17 +21,7 @@ body{
     font-size: 10px;
     color: #999;
   }
-  .fs-12{
-    font-size: 12px;
-  }
-  .fs-14{
-    font-size: 14px;
-  }
-  .fs-16{
-    font-size: 16px;
-  }
   .division{
-    display: flex;
     .sidebar{
         width: 20%;
         max-width: 230px;
@@ -39,12 +29,10 @@ body{
         padding: 0 20px 0 25px;
         border-right: 1px solid #f0f0f0;
         .company-logo{
-            display: flex;
             align-items: center;
             margin: 12px 0 12px 12px;
             text-decoration: none;
             h1{
-                font-size: 22px;
                 font-weight: 700;
                 padding-left: 10px;
             }
@@ -53,12 +41,8 @@ body{
             }
         }
         .navbar{
-            display: flex;
-            flex-direction: column;
             .navbar-options, .tools, .projects{
                 margin-top: 20px;
-                display: flex;
-                flex-direction: column;
                 .navbar-links{
                     padding: 10px 20px;
                     margin: 5px 0;
@@ -89,17 +73,14 @@ body{
                 }
             }
             .tools p, .projects p{
-                font-size: 12px;
                 color: #999;
                 font-weight: 500;
             }
             a{
                 text-decoration: none;
-                font-size: 14px;
                 font-weight: 500;
                 svg{
                     margin-right: 10px;
-                    font-size: 18px;
                     color: #404449;
                 }
             }
@@ -111,14 +92,8 @@ body{
     }
     .header-main-wrapper{
         width: 80%;
-        display: flex;
-        flex-direction: column;
         padding: 25px 18px 25px 35px;
         .main{
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            flex-direction: row;
             .main-division{
                 width: 70%;
             }
@@ -128,31 +103,24 @@ body{
                 width: 30%;
                 min-width: 270px;
                 .subhead{
-                    font-size: 14px;
                     color: #6c62dd;
                     font-weight: 500;
                     margin-bottom: 15px;
                 }
                 .info{
-                    font-size: 28px;
                     font-weight: 700;
                     width: 190px;
                 }
                 .profiles{
-                    display: flex;
                     position: absolute;
                     top: 110px;
                     right: 40px;
                     .profile{
                         width: 40px;
                         height: 40px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                         background: pink;
                         border-radius: 50%;
                         border: 2px solid #fff;
-                        font-size: 14px;
                         img{
                             width: 30px;
                             height: 30px;
@@ -202,8 +170,6 @@ body{
                     font-weight: 500;
                     border-radius: 10px;
                     background-color: transparent;
-                    display: flex;
-                    justify-content: space-between;
                     cursor: pointer;
                     transition: all 0.5s linear;
                     &:hover{
@@ -222,9 +188,6 @@ body{
                     .meeting-icon{
                         width: 58px;
                         height: 58px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                         background: #eee;
                         border-radius: 50%;
                         transition: all 0.5s linear;
@@ -234,9 +197,6 @@ body{
                         }
                     }
                     .upcoming-meeting{
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
                         padding: 30px 0;
                         border-bottom: 1px solid #f0f0f0;
                         cursor: pointer;
@@ -272,24 +232,15 @@ body{
         }
     }
     .header{
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 20px;
-        flex-direction: row;
         .header-operations{
             width: 35%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: relative;
             .search-alert{
-                display: flex;
-                justify-content: space-between;
                 align-items: center;
                 position: relative;
                 svg{
                     margin: 0 40px 0 0;
-                    font-size: 20px;
                     color: #999;
                     cursor: pointer;
                 }
@@ -297,7 +248,6 @@ body{
                     background-color: #f0f0f0;
                     border-radius: 50%;
                     padding: 10px;
-                    font-size: 18px;
                     transition: all 0.5s linear;
                     &:hover{
                         background-color: #a4a4a4;
@@ -326,9 +276,6 @@ body{
                 }
             }
             .logout{
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 31px;
                 padding: 5px 8px;
                 border-radius: 25px;
@@ -353,17 +300,13 @@ body{
                 p{
                     margin: 0 10px;
                     font-weight: 500;
-                    font-size: 14px;
                 }
                 svg{
                     color: #999;
-                    font-size: 12px;
                 }
             }
         }
         .profile-wrapper{
-            display: flex;
-            align-items: center;
             width: 65%;
             .profile-img{
                 margin-right: 25px;
@@ -371,9 +314,6 @@ body{
                 height: 63px;
                 border-radius: 50%;
                 background-color: #ffffff;
-                display: flex;
-                justify-content:center ;
-                align-items: center;
                 border: 3px solid #eee;
                 border-right: 3px solid #6c62dd;
                 transform: rotate(310deg);
@@ -383,9 +323,6 @@ body{
                     height: 57px;
                     border-radius: 50%;
                     background-color: #fbaf96;
-                    display: flex;
-                    justify-content:center ;
-                    align-items: center;
                 }
                 img{
                     width: 40px;
@@ -403,20 +340,14 @@ body{
                     border: 2px solid white;
                     color: #fff;
                     transform: rotate(50deg);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 12px;
                 }
             } 
             .profile-welcome{
                 .good-wishes{
-                    font-size: 30px;
                     font-weight: 600;
                     margin: 0;
                 }
                 .welcome-note{
-                    font-size: 14px;
                     color: #999;
                     margin: 0px 0 0;
                 }
@@ -424,24 +355,14 @@ body{
         }
     }
     .stats-wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 25px;
         background-color: #6c62dd;
         border-radius: 20px;
-        flex-direction: row;
         .stat{
-            display: flex;
-            align-items: center;
-            justify-content: center;
             .img{
                 width: 50px;
                 height: 50px;
                 background: #c4ecfd;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 border-radius: 50%;
                 img{
                     width: 30px;
@@ -465,7 +386,6 @@ body{
                 }
                 .amount{
                     color: #fff;
-                    font-size: 18px;
                     font-weight: 600;
                 }
                 .percent{
@@ -474,13 +394,7 @@ body{
                     color: #6c62dd;
                     border-radius: 25px;
                     margin-left: 10px;
-                    font-size: 12px;
                     font-weight: 500;
-                }
-                .amount-percent{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                 }
             }
         }
@@ -490,18 +404,11 @@ body{
         padding: 25px 35px;
         border: 1px solid #f0f0f0;
         border-radius: 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: normal;
         flex-direction: row;
         .total-sales-wrapper{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
             width: 50%;
             .sales-cost{
                 .title{
-                    font-size: 20px;
                     font-weight: 600;
                     margin: 0 0 5px 0;
                     line-height: 1;
@@ -510,7 +417,6 @@ body{
             .sales-amount{
                 margin-top: 40px;
                 .amount{
-                    font-size: 35px;
                     font-weight: 700;
                     color: #6c62dd;
                     line-height: 1;
@@ -519,7 +425,6 @@ body{
                     background: #cef7db;
                     padding: 2px 6px;
                     border-radius: 25px;
-                    font-size: 12px;
                     margin-left: 15px;
                     color: #74ca7d;
                     font-weight: 700;
@@ -534,14 +439,9 @@ body{
                 }
                 .previous-year{
                     color: #31c741;
-                    font-size: 14px;
                     font-weight: 500;
                     margin: 5px 0 0 0;
                 }
-            }
-            .amount-percent{
-                display: flex;
-                align-items: center;
             }
         }
         .analytic{
@@ -549,15 +449,11 @@ body{
             .title{
                 font-weight: 600;
                 span{
-                    font-size: 12px;
                     color:#31c741;
                     font-weight: 700;
                 }
             }
             .analytic-months{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 select{
                     border: none;
                     font-size: 10px;
@@ -571,11 +467,7 @@ body{
     }
     .transaction-history{
         .heading{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             p{
-                font-size: 28px;
                 font-weight: 600;
                 margin-bottom: 20px;
             }
@@ -593,15 +485,9 @@ body{
                 border: 1px solid #f0f0f0;
                 border-radius: 10px;
                 cursor: pointer;
-                svg{
-                    font-size: 18px;
-                }
             }
         }
         .filter-wrapper{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
             margin-bottom: 15px;
             .filter{
                 margin-right: 10px;
@@ -614,7 +500,6 @@ body{
                     padding-right: 10px;
                     background: #f3f4f8;
                     color: #404449;
-                    font-size: 14px;
                     cursor: pointer;
                     &:focus-visible{
                         outline: none !important;
@@ -625,11 +510,7 @@ body{
         .display-table{
             overflow-x: auto;
             .transaction{
-                display: flex;
-                flex-direction: column;
                 .row{
-                    display: flex;
-                    align-items: center;
                     padding: 25px 0;
                     border-bottom: 1px solid #f0f0f0;
                     transition: transform 0.5s linear;
@@ -640,26 +521,17 @@ body{
                     .customer{
                         width: 30%;
                         min-width: 90px;
-                        display: flex;
-                        align-items: center;
-                        flex-direction: row;
                         .customer-photo{
                             width: 45px;
                             height: 45px;
                             background-color: #eee;
                             border-radius: 50%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
                             position: relative;
                             .black-outer{
                                 width: 20px;
                                 height: 20px;
                                 background-color: #000;
                                 border-radius: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
                                 position: absolute;
                                 bottom: 0px;
                                 right: 0;
@@ -670,7 +542,6 @@ body{
                             font-weight: 500;
                         }
                         .customer-email{
-                            font-size: 12px;
                             color: #999;
                         }
                         .customer-info{
@@ -680,7 +551,6 @@ body{
                     .status{
                         width: 15%;
                         min-width: 70px;
-                        font-size: 12px;
                         .status-fill{
                             border: 1px solid #f0f0f0;
                             padding: 5px 0px 5px 10px;
@@ -704,20 +574,15 @@ body{
                         width: 20%;
                         min-width: 60px;
                         font-weight: 500;
-                        font-size: 14px;
                     }
                     .invoice{
                         width: 15%;
                         min-width: 55px;
                         font-weight: 500;
-                        font-size: 14px;
                     }
                     .people{
                         width: 15%;
                         min-width: 50px;
-                        display: flex;
-                        flex-direction: row;
-                        font-size: 14px;
                         .photo-wrapper{
                             max-width: 20px;
                         }
@@ -728,9 +593,6 @@ body{
                         .photo{
                             width: 30px;
                             height: 30px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
                             background-color: #999;
                             border-radius: 50%;
                             border: 1px solid #fff;
@@ -739,7 +601,6 @@ body{
                     &.default{
                         padding: 15px 0;
                         color: #999;
-                        font-size: 12px;
                         div{
                             font-weight: 400 !important;
                         }
@@ -766,7 +627,6 @@ body{
         .header{
             align-items: center;
             .col-left{
-                font-size: 16px;
                 font-weight: 600;
             }
             .icon{
@@ -774,16 +634,10 @@ body{
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 cursor: pointer;
                 transition: all 0.5s linear;
                 &:first-child{
                     margin-right: 10px;
-                }
-                svg{
-                    font-size: 12px;
                 }
                 &:hover{
                     background-color: #6c62dd;
@@ -792,16 +646,12 @@ body{
                     }
                 }
             }
-            .col-right{
-                display: flex;
-            }
         }
         .days.row, .body .row{
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             align-items: center;
             .day, .date{
-                font-size: 12px;
                 color: #999;
                 text-align: center;
             }
@@ -818,9 +668,6 @@ body{
                     height: 30px;
                     border-radius: 50%;
                     background-color: #fff;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     margin: auto;
                     cursor: pointer;
                     transition: all 0.5s linear;
@@ -868,7 +715,6 @@ body{
             margin-top: 25px;
             .info{
                 width: 100% !important;
-                font-size: 24px !important;
             }
         }
     }        

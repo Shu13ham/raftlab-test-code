@@ -19,9 +19,9 @@ function App() {
       <Router>
         <div className="body">
           <div className="container">
-            <div className="division">
+            <div className="division flex">
               <Sidebar/>
-              <div className='header-main-wrapper'>
+              <div className='header-main-wrapper  flex flex-col'>
                 <Header/>
                 <Routes>
                   <Route exact path="/" element={<Main />} />

@@ -25,15 +25,15 @@ const Calendar = ({ showDetailsHandle }) => {
     const dateFormat = "MMMM yyyy";
     return (
       <div className="header row">
-        <div className="col col-left">
+        <div className="col col-left text-base">
           <span>{format(currentMonth, dateFormat)}</span>
         </div>
-        <div className="col-right">
-            <div className="icon" onClick={() => changeWeekHandle("prev")}>
-                <FontAwesomeIcon icon={faAngleLeft} color='#6c62dd'/>
+        <div className="col-right flex">
+            <div className="icon  flex justify-center items-center" onClick={() => changeWeekHandle("prev")}>
+                <FontAwesomeIcon icon={faAngleLeft} color='#6c62dd' className="text-xs"/>
             </div>
-            <div className="icon col-end" onClick={() => changeWeekHandle("next")}>
-                <FontAwesomeIcon icon={faAngleRight} color='#6c62dd'/>
+            <div className="icon  flex justify-center items-center col-end" onClick={() => changeWeekHandle("next")}>
+                <FontAwesomeIcon icon={faAngleRight} color='#6c62dd' className="text-xs"/>
             </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const Calendar = ({ showDetailsHandle }) => {
     let startDate = startOfWeek(currentMonth, { weekStartsOn: 1 });
     for (let i = 0; i < 7; i++) {
       days.push(
-        <div className="day" key={i}>
+        <div className="day text-xs" key={i}>
           {format(addDays(startDate, i), dateFormat)}
         </div>
       );
@@ -66,14 +66,14 @@ const Calendar = ({ showDetailsHandle }) => {
         const cloneDay = day;
         days.push(
           <div
-            className='date'
+            className='date text-xs'
             key={day}
             onClick={() => {
               const dayStr = format(cloneDay, "ccc dd MMM yy");
               onDateClickHandle(cloneDay, dayStr);
             }}
           >
-            <span className={`number ${
+            <span className={`number  flex justify-center items-center ${
               isSameDay(day, new Date())
                 ? "today"
                 : isSameDay(day, selectedDate)
