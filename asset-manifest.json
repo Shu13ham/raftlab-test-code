@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/raftlab-test-code/static/css/main.f4a8fd6e.css",
-    "main.js": "/raftlab-test-code/static/js/main.7c43d48b.js",
+    "main.js": "/raftlab-test-code/static/js/main.9ec58fa7.js",
     "static/js/787.6db15411.chunk.js": "/raftlab-test-code/static/js/787.6db15411.chunk.js",
     "index.html": "/raftlab-test-code/index.html",
     "main.f4a8fd6e.css.map": "/raftlab-test-code/static/css/main.f4a8fd6e.css.map",
-    "main.7c43d48b.js.map": "/raftlab-test-code/static/js/main.7c43d48b.js.map",
+    "main.9ec58fa7.js.map": "/raftlab-test-code/static/js/main.9ec58fa7.js.map",
     "787.6db15411.chunk.js.map": "/raftlab-test-code/static/js/787.6db15411.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4a8fd6e.css",
-    "static/js/main.7c43d48b.js"
+    "static/js/main.9ec58fa7.js"
   ]
 }
