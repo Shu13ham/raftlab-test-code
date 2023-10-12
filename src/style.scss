@@ -540,7 +540,7 @@
 
     .hamburger {
         position: absolute;
-        top: 35px;
+        top: 45px;
         left: 15px;
         transform: translateY(-50%);
         display: none;
@@ -631,6 +631,78 @@
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .main {
+        flex-direction: column !important;
+
+        .main-division,
+        .right-sidebar {
+            width: 100% !important;
+        }
+
+        .right-sidebar {
+            margin-left: 0 !important;
+            margin-top: 50px;
+        }
+
+        .right-sidebar .info {
+            width: 100% !important;
+        }
+
+        .profiles {
+            position: static !important;
+        }
+
+        .right-sidebar button {
+            max-width: 300px;
+        }
+    }
+
+    .division {
+        .sidebar {
+            width: 50%;
+            position: fixed;
+            background: #fff;
+            height: 100%;
+            z-index: 2;
+            transition: ease width 0.5s;
+
+            &.show {
+                display: block !important;
+            }
+
+            &.hide {
+                display: none !important;
+            }
+
+            button {
+                border: none;
+                background-color: transparent;
+                font-size: 20px;
+            }
+
+            .close-btn {
+                display: block !important;
+                position: absolute;
+                top: 32px;
+                right: 12px;
+            }
+        }
+
+        .hamburger {
+            display: block !important;
+        }
+    }
+    .transaction{
+        .date .invoice{
+            font-size: 14px !important;
+        }
+    }
+    .header-main-wrapper {
+        padding: 25px 18px 25px 35px !important;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .stats-wrapper {
         flex-direction: column !important;
@@ -685,7 +757,6 @@
     .filter-wrapper {
         .filter {
             margin-right: 10px !important;
-            padding: 6px 10px !important;
         }
     }
 
@@ -799,72 +870,7 @@
     .calendar .header {
         flex-direction: row !important;
     }
-}
-
-@media only screen and (max-width: 1200px) {
-    .main {
-        flex-direction: column !important;
-
-        .main-division,
-        .right-sidebar {
-            width: 100% !important;
-        }
-
-        .right-sidebar {
-            margin-left: 0 !important;
-            margin-top: 50px;
-        }
-
-        .right-sidebar .info {
-            width: 100% !important;
-        }
-
-        .profiles {
-            position: static !important;
-        }
-
-        .right-sidebar button {
-            max-width: 300px;
-        }
-    }
-
-    .division {
-        .sidebar {
-            width: 50%;
-            position: fixed;
-            background: #fff;
-            height: 100%;
-            z-index: 2;
-            transition: ease width 0.5s;
-
-            &.show {
-                display: block !important;
-            }
-
-            &.hide {
-                display: none !important;
-            }
-
-            button {
-                border: none;
-                background-color: transparent;
-                font-size: 20px;
-            }
-
-            .close-btn {
-                display: block !important;
-                position: absolute;
-                top: 32px;
-                right: 12px;
-            }
-        }
-
-        .hamburger {
-            display: block !important;
-        }
-    }
-
     .header-main-wrapper {
-        padding: 25px 18px 25px 35px !important;
+        padding: 25px 15px 25px 15px !important;
     }
 }
