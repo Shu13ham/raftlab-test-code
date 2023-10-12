@@ -56,7 +56,7 @@ export default function Sidebar() {
           <div className="navbar-options flex flex-col">
             <NavLink
               to="/"
-              className="navbar-links text-[#404449] font-medium text-sm"
+              className="navbar-links text-[#404449] font-medium text-sm active"
               activeClassName="navbar__link--active"
             >
               <FontAwesomeIcon
@@ -75,7 +75,7 @@ export default function Sidebar() {
                 icon={faChartSimple}
                 color="black"
               />
-              Analytic
+              Analytics
             </NavLink>
             <NavLink
               to="/explore"
