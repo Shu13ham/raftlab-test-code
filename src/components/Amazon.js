@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Amazon = () => {
-  return <div>Amahzon</div>;
+  return <div>Amazon</div>;
 };

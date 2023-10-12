@@ -75,7 +75,7 @@ export default function Sidebar() {
                 icon={faChartSimple}
                 color="black"
               />
-              Analytic
+              Analytics
             </NavLink>
             <NavLink
               to="/explore"
