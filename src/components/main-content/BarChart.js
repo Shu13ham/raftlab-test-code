@@ -12,9 +12,9 @@ function BarChart({ chartData }) {
               display: true,
             },
             legend: {
-              display: false
-            }
-          }
+              display: false,
+            },
+          },
         }}
       />
     </div>
